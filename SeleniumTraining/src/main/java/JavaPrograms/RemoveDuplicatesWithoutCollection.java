@@ -25,8 +25,7 @@ public class RemoveDuplicatesWithoutCollection {
 						
 						System.out.println(alChars[j]);
 						
-					}	
-					
+					}						
 					//throw new NullPointerException();
 					
 				}					

@@ -29,23 +29,23 @@ public class BrokenLinks {
 		for (int i = 0; i < allLinks.size(); i++) {
 
 			WebElement eachLink = allLinks.get(i);
-			
+
 			String hrefValue = eachLink.getAttribute("href");
-			
+
 			URL url = new URL(hrefValue);
-			
+
 			HttpURLConnection httpConnection =  (HttpURLConnection) url.openConnection();
-			
+
 			httpConnection.setConnectTimeout(3000);
-			
+
 			httpConnection.connect();
-			
+
 			if(httpConnection.getResponseCode()==200) {
-				
+
 				System.out.println(hrefValue + " --> "+ httpConnection.getResponseMessage());
 			}
 			else {
-				
+
 				System.out.println(hrefValue + " --> "+ httpConnection.getResponseMessage());
 			}
 		}
